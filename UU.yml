@@ -1,13 +1,14 @@
 ---
-- name: Package updates
+- name: Server info
   hosts: all
-  become: true
+  become: yes
   become_user: root
 
   tasks:
-    - name: apt cache update
-      apt: update_cache=yes
-           cache_valid_time=3600
-
-    - name: apt upgrade
-      apt: upgrade=safe
+    - name: Display important variables
+      debug:
+        msg:
+          - "MACAddress {{ hostvars[inventory_hostname]['ansible_eth0']['macaddress'] }}"
+          - "Release {{ hostvars[inventory_hostname]['ansible_lsb']['description'] }}"
+          - "Name {{ pi_name }}"
+          - "ChromeURL {{ chrome_url }}"
