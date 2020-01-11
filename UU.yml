@@ -1,4 +1,7 @@
 ---
+name: Upgrade!
+  hosts: all
+  
 - set_fact:
     real_ansible_host: "{{ ansible_host }}"
 
