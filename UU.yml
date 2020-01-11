@@ -1,6 +1,10 @@
 ---
-- name: Reboot
-  shell: sleep 2 && shutdown -r now "Ansible updates triggered"
-  async: 1
-  poll: 0
-  ignore_errors: true
+- name: Package updates
+  hosts: all
+  become: true
+  become_user: root
+
+  tasks:
+    - name: apt cache update
+      apt: update_cache=yes
+           cache_valid_time=3600
