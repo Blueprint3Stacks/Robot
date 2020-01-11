@@ -1,5 +1,5 @@
 ---
-name: Upgrade!
+- name: Upgrade!
   hosts: all
   
 - set_fact:
