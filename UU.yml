@@ -1,10 +1,9 @@
 ---
 - name: Hello World!
   hosts: all
-  
-  - name: Update and upgrade apt packages
-    become: true
-    apt:
-    update_cache: yes
-    upgrade: yes
+ 
+  tasks:
+ 
+  - name: Hello World!
+    shell: echo "Hi! Tower is working."
 
