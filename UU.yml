@@ -3,8 +3,8 @@
   hosts: all
   
 - name: Update and upgrade apt packages
-    become: true
-    apt:
-    update_cache: yes
-    upgrade: yes
+  become: true
+  apt:
+  update_cache: yes
+  upgrade: yes
 
