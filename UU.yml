@@ -5,13 +5,13 @@
 
 
 
-- name: 'Update APT package cache'
+- name: Update APT package cache
   command: apt update_cache=yes
 
-- name: 'Upgrade APT to the lastest packages'
+- name: Upgrade APT to the lastest packages
   command: apt upgrade=safe
 
-- name: 'Reboot'
+- name: Reboot
   shell: sleep 2 && reboot
   async: 1
   poll: 0
