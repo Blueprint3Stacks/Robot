@@ -1,10 +1,10 @@
-
-- name: UU!
-  hosts: all
+---
+  - name: UU!
+    hosts: all
   
-- name: Update and upgrade apt packages
-   become: true
-   apt:
-   update_cache: yes
-   upgrade: yes
+  - name: Update and upgrade apt packages
+    become: true
+    apt:
+    update_cache: yes
+    upgrade: yes
 
