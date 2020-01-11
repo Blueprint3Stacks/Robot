@@ -1,4 +1,7 @@
 ---
+- name: Hello World!
+  hosts: all
+  
 - name: reboot
   command: shutdown -r +0 'Ansible Reboot triggered'
   async: 0
