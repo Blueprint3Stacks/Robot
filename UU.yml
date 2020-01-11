@@ -1,6 +1,6 @@
 ---
-  - name: UU!
-    hosts: all
+- name: Hello World!
+  hosts: all
   
   - name: Update and upgrade apt packages
     become: true
